@@ -1,0 +1,9 @@
+﻿@model FruitCorp.Web.Models.Pages.StandardPage
+
+@{
+    Layout = "~/Views/Shared/_WithSubNavigation.cshtml";
+}
+
+<h1>@Html.PropertyFor(x => x.PageName)</h1>
+<p class="lead">@Html.PropertyFor(x => x.MainIntro)</p>
+@Html.PropertyFor(x => x.MainBody)

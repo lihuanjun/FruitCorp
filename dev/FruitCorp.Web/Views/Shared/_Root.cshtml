@@ -1,0 +1,31 @@
+﻿@using FruitCorp.Web.Helpers
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <link href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/Static/css/custom.css" rel="stylesheet">
+    <style type="text/css">
+        .col-md-8 {
+            background-color:red;
+        }
+        .col-md-4 {
+            background-color:green;
+        }
+    </style>
+    @Html.RenderEPiServerQuickNavigator()
+</head>
+<body>
+    <div class="container">
+        @{Html.RenderMainNavigation();}
+        @RenderBody()
+    </div>
+    <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+</html>
