@@ -1,9 +1,16 @@
 ﻿@model FruitCorp.Web.Models.Pages.StandardPage
+@using FruitCorp.Web.Helpers;
 
 @{
     Layout = "~/Views/Shared/_WithSubNavigation.cshtml";
 }
 
+@Html.PropertyFor(x => x.Image, new {width = "100%", EditContainerClass="inline"})
+
 <h1>@Html.PropertyFor(x => x.PageName)</h1>
-<p class="lead">@Html.PropertyFor(x => x.MainIntro)</p>
+<p class="lead">@Html.PropertyFor(x => x.MainIntro, new {CustomTag = "span", EditContainerClass="inline"})</p>
 @Html.PropertyFor(x => x.MainBody)
+
+@section RightColumn{
+    @Html.PropertyFor(x => x.RightColumnContent)
+}

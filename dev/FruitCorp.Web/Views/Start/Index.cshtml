@@ -1,13 +1,10 @@
 ﻿@model FruitCorp.Web.Models.Pages.StartPage
 
-@{
-    ViewBag.Title = Html.PropertyFor(x => x.PageName);
-    Layout = "~/Views/Shared/_Root.cshtml";
-}
+@{ Layout = "~/Views/Shared/_Root.cshtml"; }
 
-
-<div class="row">
-    <div class="col-md-12">
-        <h1>@Html.PropertyFor(x => x.PageName)</h1>
-    </div>
-</div>
+@Html.PropertyFor(x => x.Content, new 
+    {        
+        ChildrenCssClass = "startpage-content-item",
+        EditContainerClass = "clearfix",
+        Tag = "StartPage"
+    })

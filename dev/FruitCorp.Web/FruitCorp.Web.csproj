@@ -247,21 +247,24 @@
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <ItemGroup>
+    <Compile Include="Business\TemplateModelRegistrator.cs" />
     <Compile Include="Controllers\StandardPageController.cs" />
     <Compile Include="Controllers\StartController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\FormattingExtensions.cs" />
     <Compile Include="Helpers\NavigationHelpers.cs" />
+    <Compile Include="Models\Media\GeneralImage.cs" />
+    <Compile Include="Models\Pages\BasePage.cs" />
     <Compile Include="Models\Pages\StandardPage.cs" />
     <Compile Include="Models\Pages\StartPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Business\" />
     <Folder Include="Models\Blocks\" />
-    <Folder Include="Models\Media\" />
     <Folder Include="Models\Properties\" />
+    <Folder Include="Static\Icon\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="IndexingService\IndexingService.svc" />
@@ -282,6 +285,10 @@
     <Content Include="Views\Shared\_Root.cshtml" />
     <Content Include="Views\StandardPage\Index.cshtml" />
     <Content Include="Views\Shared\_WithSubNavigation.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\Textarea.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\Image.cshtml" />
+    <Content Include="Views\Shared\StandardPage.cshtml" />
+    <Content Include="Views\Shared\PagePartials\StandardPageCompact.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
