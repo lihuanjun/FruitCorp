@@ -1,0 +1,10 @@
+﻿@model FruitCorp.Web.Models.Pages.StartPage
+
+@{ Layout = "~/Views/Shared/_Root.cshtml"; }
+
+@Html.PropertyFor(x => x.Content, new 
+    {        
+        ChildrenCssClass = "startpage-content-item",
+        EditContainerClass = "clearfix",
+        Tag = "StartPage"
+    })
