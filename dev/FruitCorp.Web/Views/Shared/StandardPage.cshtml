@@ -2,7 +2,7 @@
 
 
 <div class="standard-page-teaser">
-    @Html.PropertyFor(x => x.Image, new {width = "100%", EditContainerClass="inline"})
+    @Html.PropertyFor(x => x.Image, new { width = "90%", imgclass = "display inline-none", dsource = "data.jpg", EditContainerClass = "inline" })
     <h3>@Html.PropertyFor(x => x.PageName)</h3>
     <small>
         @Html.PropertyFor(x => x.MainIntro)

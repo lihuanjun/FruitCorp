@@ -1,9 +1,19 @@
 ﻿@model EPiServer.Url
 
 @if (Model != null && !Model.IsEmpty()){
-    var width = string.Empty;
+    string width = string.Empty, imgclass = string.Empty, dsource = string.Empty;
     if(ViewData.ContainsKey("width")){
-        width = "width = '"+ ViewData["width"] +"'";
+        width = ViewData["width"].ToString();
     }
-    <img src="@Model" @width />
+    
+    if (ViewData.ContainsKey("imgclass"))
+    {
+        imgclass = ViewData["imgclass"].ToString();
+    }
+    
+    if (ViewData.ContainsKey("dsource"))
+    {
+        dsource = ViewData["dsource"].ToString();
+    }
+    <img src="@Model" width="@width" class="@imgclass" data-source="@dsource" />
 }

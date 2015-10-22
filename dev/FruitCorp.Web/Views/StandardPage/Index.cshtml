@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_WithSubNavigation.cshtml";
 }
 
-@Html.PropertyFor(x => x.Image, new {width = "100%", EditContainerClass="inline"})
+@Html.PropertyFor(x => x.Image, new { width = "90%", imgclass = "display inline-none", dsource = "data.jpg", EditContainerClass = "inline" })
 
 <h1>@Html.PropertyFor(x => x.PageName)</h1>
 <p class="lead">@Html.PropertyFor(x => x.MainIntro, new {CustomTag = "span", EditContainerClass="inline"})</p>
