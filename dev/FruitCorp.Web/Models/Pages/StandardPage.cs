@@ -14,8 +14,8 @@ namespace FruitCorp.Web.Models.Pages
         /// <summary>
         /// 主体介绍
         /// </summary>
-        [UIHint("Textarea")]
-        [UIHint(UIHint.Textarea)]
+        [UIHint("TextareaLineBreak")]
+        //[UIHint(UIHint.Textarea)]
         [UIHint(UIHint.Textarea, PresentationLayer.Edit)]
         public virtual string MainIntro { get; set; }
 
